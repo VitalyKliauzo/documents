@@ -1,4 +1,0 @@
-\scripts\
-ignore.txt
-Gruntfile.js
-package.json

@@ -1,1 +1,0 @@
-start "Static server" static-server.cmd && start "Socket server" socket-server.cmd && start chrome "localhost:8080"
