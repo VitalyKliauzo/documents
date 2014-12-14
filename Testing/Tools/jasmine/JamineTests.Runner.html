@@ -1,0 +1,27 @@
+﻿ 
+
+<!DOCTYPE html>
+<html>
+<head>
+    	<title>Jasmine Test Runner</title>
+    	<link rel="stylesheet" type="text/css" href="./Jasmine/jasmine.css"/>
+    	<script type="text/javascript" src="./Jasmine/jasmine.js"></script>        
+      <script type="text/javascript" src="./Jasmine/jasmine-html.js"></script>
+      
+  <!-- Source to Test -->
+        <script type="text/javascript" src="./source.js"></script>        
+    
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="source.spec.js"></script>        
+  <style>
+      #jasmine_content {visibility: collapse;}
+      .jasmine_reporter {position:  absolute ; top: 0; left:0}      
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var githubRepos = angular.module('myApp', ['ngResource', 'app.controllers', 'app.filters', 'app.services']);

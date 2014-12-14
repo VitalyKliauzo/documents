@@ -1,0 +1,97 @@
+
+The tenets of TDD are simple:
+• Code is written only when there is a failing test that requires the code to pass
+• The bare minimum amount of code is written to ensure that the test passes
+• Duplication is removed at every step
+• Once all tests are passing, the next failing test is added for the next required functionality.
+
+These simple rules ensure that:
+• Your code develops organically, and that every line of code written is purposeful.
+• Your code remains highly modular, cohesive, and reusable (as you need to be able
+to test it).
+• You provide a comprehensive array of tests to prevent future breakages and bugs.
+• The tests also act as specification, and thus documentation, for future needs and
+changes.
+
+
+Preparation:
+1. ensure that NodeJS is installed on your machine.
+2. npm install -g karma
+3. npm install karma-ng-scenario // for me, for E2E
+4. npm install karma-junit-reporter// for me, for E2E 
+
+Getting your config file up
+- karma init (or you already have it if used Yeoman to create app skeleton karma.conf.js)
+
+Starting the Karma server
+- karma start (this is exactly what our Testing NodeJS configuration does). This will start the Karma server on port 9876 (the default, which you can change by editing the karma.conf.js file from the previous step). (Firefox, Chrome, IE, Opera, and even PhantomJS)
+
+Running the tests
+- karma run
+
+
+Unit Tests
+
+Jasmine is what we call a behavior-driven development framework
+describe("MyController:", function() {
+	it("to work correctly", function() {
+		var a = 12;
+		var b = a;
+		expect(a).toBe(b);
+		expect(a).not.toBe(null);
+	});
+});
+
+AngularJS provides some nice mockups, as well as testing functions, to allow you to
+create services, controllers, and filters right in your unit tests, as well as mock out
+HttpRequests and the like.
+
+Integration with IDEs
+- have a look at testing NodeJS configuration for DocView
+
+Running tests on every change
+- autoWatch flag in karma.conf.js. Setting it to true tells Karma to run your tests every time the file it watches (which is your source and test code) changes.
+
+
+End-to-End/Integration Tests
+
+AngularJS tries to ease regression by providing a Scenario Runner that simulates user interactions with your application.
+The Scenario Runner allows you to describe your application in a Jasmine-like syntax.
+
+describe('Search Results', function() {
+	beforeEach(function() {
+		browser().navigateTo('http://localhost:8000/app/index.html');
+	});
+	it('should filter results', function() {
+		input('searchBox').enter('jacksparrow');
+		element(':button').click();
+		expect(repeater('ul li').count()).toEqual(10);
+		input('filterText').enter('Bees');
+		expect(repeater('ul li').count()).toEqual(1);
+	});
+});
+
+There are two ways of running these tests:
+1. Automated:
+	a. Add ANGULAR_SCENARIO & ANGULAR_SCENARIO_ADAPTER to the files section of the config.// for me add ng-scenario to frameworks.
+	b. Add a proxies section that redirects requests to the server to the correct folder where your test files are located, for example:
+		proxies = {'/': 'http://localhost:8000/test/e2e/'};
+	c. Add a Karma root to ensure that Karma’s source files don’t interfere with your tests, like so:
+		urlRoot = '/_karma_/';
+2. Manual:
+	a. Create a simple runner.html file, which sources the angular-scenario.js file from the Angular library.
+	b. Source all your JS files which hold the specifications that you have written as part of your Scenario suite.
+	c. Start your web server, and browse to the runner.html file.
+
+There are some amazing benefits
+
+AngularJS aware
+The Angular Scenario Runner, as the name suggests, is made by and for Angular. Thus, it is AngularJS aware, and knows and understands the various AngularJS elements, like bindings. Need to input some text? Check the value of a binding? Verify the state of a repeater? All can be done easily through the use of the scenario runner.
+
+No more random waits
+The Angular awareness also means that Angular is aware of all XHRs being made to the server, and thus can avoid waiting for random intervals of time for pages to load. The Scenario Runner knows when a page has loaded, and thus is much more deterministic than a Selenium test, for example, where tests can fail by timing out while waiting for a page to load.
+
+Debugging capabilities
+Wouldn’t it be nice if you could look at your code, dig into the JavaScript, and pause and resume the test when you wanted to, all while the Scenario tests were running? With the Angular Scenario Runner, all this is possible, and much more.
+
+https://confluence.bw-sl.com/display/WN/E2E+Testing+setup+for+developers?src=contextnavpagetreemode
