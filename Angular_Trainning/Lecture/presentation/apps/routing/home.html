@@ -1,0 +1,33 @@
+<div >
+	<div class="title">
+		<h1>Se</h1>
+		<img src="http://alexpeattie.com/images/octocat.png">
+		<h1>rch</h1>
+		<h2>github</h2>
+		<h4>repositories</h4>
+	</div>
+	<div class="search-box">
+		<input type="text" placeholder="Search..." ng-model="search_query" class="search">
+		<!--<button ng-click="search()"><i class="fa fa-search fa-2x"></i></button>-->
+		<div>
+			<div ng-repeat="qualifier in qualifiers" class="additional">
+				<label for=" {{qualifier.qualificator}} "> {{ qualifier.qualificator | capitalize}} </label>
+				<input type="text" id=" {{qualifier.qualificator}} " placeholder=" {{qualifier.description}} " ng-disabled="!search_query" class="a-inputs" ng-model="qualifier.include">
+			</div>
+		</div>
+	</div>
+	<ul>
+		<li ng-repeat="repo in (repos.items | filter : {'size':qualifiers[0].include, 'full_name': search_query })" class="item">
+			<img ng-src=" {{repo.owner.avatar_url}} " title=" {{repo.owner.login}}'s avatar ">
+
+			<a href=" {{repo.html_url}} "> {{repo.full_name}} </a>
+			
+			<span class="info">Owner ID: <span class="text">{{repo.owner.id}}</span></span>
+			<span class="info">Owner login: <span class="text">{{repo.owner.login}}</span></span>
+			
+			<span class="info">Repo description: <span class="text">{{repo.description}}</span></span>
+			<span class="info">Size: <span class="text">{{repo.size}}</span></span>
+
+		</li>
+	</ul>
+</div>

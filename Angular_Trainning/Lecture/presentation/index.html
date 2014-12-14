@@ -1,0 +1,964 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title><!-- Yout title here --></title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">  <!-- default, beige, sky, night, serif, simple, solarized, blood -->
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+ 
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background-color="#FFFFFF">
+          <h3 style="color: black">What is Single page Application?</h3>
+        </section>
+        <section>         
+          <section>
+            <h3>Single Page Application</h3>
+            <div>
+              <h5>also known as single-page interface (SPI), is a web application or web site that fits on a single web page with the goal of providing a more fluid user experience akin to a desktop application</h5>&#169;<a href="http://en.wikipedia.org/wiki/Single-page_application" target="_blank">Wikipedia</a>
+            </div>
+            <br>
+            <div>
+              <h5>Single page apps are distinguished by their ability to redraw any part of the UI without requiring a server roundtrip to retrieve HTML</h5>&#169;<a href="http://singlepageappbook.com/" target="_blank">http://singlepageappbook.com/</a>
+            </div>
+          </section>
+          <section>
+            <h3>SPA issues</h3>
+            <p>
+              <ul>
+                <li>Browser history</li>
+                <li>Search engine optimization</li>               
+                <li>CI - html verification</li>
+              </ul>
+            </p>
+          </section>
+        </section>
+        <section>
+          <section data-background-size="cover" 
+            data-background-color="#FFFFFF">
+            <img style="border:none; box-shadow:none;" src="img/square.png">
+            <h3 style="color:black">AngularJS</h3>
+          </section>
+          <section>
+            <h3>What is Angular</h3>
+            <h5>AngularJS is a structural framework for dynamic web apps</h5>
+            <ul>
+              <li>HTML as your template language</li>
+              <li>extend HTML's syntax</li>
+            </ul>
+            <br/>
+            <br/>
+            <h3 class="fragment">Angular is what HTML would have been had it been designed for applications.</h3>
+          </section>
+          <section>
+            <h3>AngularJS features</h3>
+            <ul>
+              <li class="fragment">MVC</li>
+                  <li class="fragment" >Dependency Injection</li>
+                  <li class="fragment">Plain JS models</li>                  
+                  <li class="fragment">Modular architecture</li>
+                  <li class="fragment">Testing bundled</li>
+                  <li class="fragment">Directives (reusable components)</li>
+              </ul>
+          </section>
+          <section>
+            <div>
+              <p>Angular teaches the browser new syntax through a construct we call directives.</p><p>Examples include:</p>
+              <ul>
+                <li class="fragment">Data binding, as in {{}}.</li>
+                <li class="fragment">DOM control structures for repeating/hiding DOM fragments.</li>
+                <li class="fragment">Support for forms and form validation.</li>
+                <li class="fragment">Attaching code-behind to DOM elements.</li>
+                <li class="fragment">Grouping of HTML into reusable components.</li>
+              </ul>
+            </div>
+          </section>          
+          <section>
+            <h3>A complete client-side solution</h3>
+            <p>Angular comes with the following out-of-the-box:</p>
+            <ul style="font-size:80%">
+              <li  class="fragment">Everything you need to build a CRUD app in a cohesive set:
+                <ul style="font-size:80%; line-height: 1.2em">
+                  <li class="fragment">data-binding</li>
+                  <li class="fragment">basic templating directives</li>
+                  <li class="fragment">form validation</li>
+                  <li class="fragment">routing</li>
+                  <li class="fragment">reusable components</li>
+                  <li class="fragment">dependency injection.</li>
+                </ul>
+              </li>
+              <li class="fragment">Testability story:
+                <ul style="font-size:80%; line-height: 1.2em">
+                  <li class="fragment">unit-testing</li>
+                  <li class="fragment">end-to-end testing</li>
+                  <li class="fragment">mocks</li>                  
+                </ul>
+              </li>
+              <li class="fragment">Seed application with directory layout and test scripts as a starting point.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Angular frees you from</h3>
+            <ul>
+              <li>Registering callbacks</li>
+              <li>Manipulating HTML DOM programmatically</li>
+              <li>Marshaling data to and from the UI</li>
+              <li>Writing tons of initialization code just to get started</li>
+            </ul>
+          </section>
+        </section>          
+        <section>
+          <section>
+            <h3>Bootstrap</h3>
+            <div>
+              <p>Automatic Initialization</p>
+              <p>Manual Initialization</p>
+              <p>Deferred Bootstrap</p>
+            </div>
+          </section>
+          <section>
+            <h3>Bootstrap: Automatic Initialization</h3>
+            <div>
+              <p>What happen during the app bootstrap:</p>
+              <ul>
+                <li>Loading the module associated with the ng-app.</li>
+                <li>Injector is created.Injector creates the root scope - context for the model of our application.</li>
+                <li>Angular "compile" the DOM starting at the ngApp root element, processing any directives and bindings found along the way.</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h3>"I'm in a hurry" example</h3>
+            <pre style="font-size:50%"><code>
+&lt;!doctype html&gt;
+&lt;html ng-app="myApp"&gt;
+  &lt;body&gt;
+    &lt;script src="http://code.angularjs.org/angular.js"&gt;&lt;/script&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;div&gt;
+    {{ 'World' | greet }}
+    &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;             
+            </code></pre>
+            <pre style="font-size:50%"><code>           
+// declare a module
+var myAppModule = angular.module('myApp', []);
+ 
+// configure the module.
+// in this example we will create a greeting filter
+myAppModule.filter('greet', function() {
+ return function(name) {
+    return 'Hello, ' + name + '!';
+  };
+});
+            </code></pre>
+            <a href="http://localhost:8000/im_in_a_hurry/index.html" target="_blank">test life example</a>
+          </section>          
+          <section>
+            <img src="img/concepts-startup.png" width="100%">
+          </section>          
+          <section>
+            <h3>Bootstrap: Manual Initialization</h3>
+            <pre><code>
+&lt;!doctype html&gt;
+&lt;html xmlns:ng="http://angularjs.org"&gt;
+  &lt;body&gt;
+    Hello {{'World'}}!
+    &lt;script src="http://code.angularjs.org/angular.js"&gt;&lt;/script&gt;
+    &lt;script>
+       angular.element(document).ready(function() {
+         angular.module('myApp', []);
+         angular.bootstrap(document, ['myApp']);
+       });
+    &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Bootstrap: Deferred Bootstrap</h3>
+            <div style="text-align: center">            
+              <div style="text-align: left; padding-left: 70px; display:inline-block">
+                <div>This feature is for</div>
+                <ul>
+                  <li>Batarang</li>
+                  <li>test runners</li>
+                </ul>
+              </div>
+            </div>
+            <br/>
+            <div>             
+              <div>If window.name contains prefix NG_DEFER_BOOTSTRAP! when angular.bootstrap is called the processed is paused until</div>
+              <div>angular.resumeBootstrap() is called.</div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Dependency Injection</h3>
+            <p>There are only three ways an object or a function can get a hold of its dependencies:</p>
+            <ul style="font-size: 80%">
+              <li>The dependency can be created, typically using the new operator.</li>
+              <li>The dependency can be looked up by referring to a global variable.</li>
+              <li>The dependency can be passed in to where it is needed.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Dependency Injection</h3>
+            <img src="img/DI.png" alt="">
+          </section>
+          <section>
+            <h3>Dependency Annotation</h3>
+            <h5>Inferring Dependencies:</h5>
+            <pre><code>
+function MyController($scope, greeter) {
+  ...
+}
+            </code></pre>
+            <p style="font-size:60%">While straightforward, this method will not work with JavaScript minifiers/obfuscators as they rename the method parameter names.</p>
+          </section>
+          <section>
+            <h3>Dependency Annotation</h3>
+            <h5>$inject Annotation</h5>
+            <pre><code>
+var MyController = function(renamed$scope, renamedGreeter) {
+  ...
+}
+MyController['$inject'] = ['$scope', 'greeter'];
+            </code></pre>
+            <p style="font-size:60%">This method of annotation is useful for controller declarations since it assigns the annotation information with the function.</p>
+          </section>
+          <section>
+            <h3>Dependency Annotation</h3>
+            <h5>Inline Annotation</h5>
+            <pre><code>
+someModule.factory('greeter', ['$window', function(renamed$window) {
+  ...
+}]);
+            </code></pre>
+            <p style="font-size:60%">Keep in mind that all of the annotation styles are equivalent and can be used anywhere in Angular where injection is supported.</p>
+          </section>                    
+          <section>
+            <h3>Where to use DI</h3>
+            <h5>DI in controllers</h5>
+            <pre><code>
+someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
+  ...
+  $scope.aMethod = function() {
+    ...
+  }
+  ...
+}]);
+            </code></pre>
+            <p style="font-size: 60%">This avoids the creation of global functions for controllers and also protects against minification.</p>
+          </section>
+          <section>
+            <h3>Where to use DI</h3>
+            <h5>Factory methods</h5>
+            <p style="font-size: 59%">Examples are directives, services, and filters.</p>
+            <pre style="font-size: 50%"><code>
+angular.module('myModule', []).
+  config(['depProvider', function(depProvider){
+    ...
+  }]).
+  factory('serviceId', ['depService', function(depService) {
+    ...
+  }]).
+  directive('directiveName', ['depService', function(depService) {
+    ...
+  }]).
+  filter('filterName', ['depService', function(depService) {
+    ...
+  }]).
+  run(['depService', function(depService) {
+    ...
+  }]);
+              </code></pre>
+          </section>
+          <section>
+            <h3>Other methods for configuring angular modules</h3>
+            <pre><code>
+.provider(name, providerType);
+.service(name, constructor);
+.value(name, object);
+.constant(name, object);
+.animation(name, animationFactory);
+.controller(name, constructor);
+            </code></pre>
+            I would strongly recommend you <a href="https://www.youtube.com/watch?v=trE8mWdqqH8" target="_blank">Dependency Injection and App Demos</a> 
+          </section>
+          <section>
+            <h3>Module Loading & Dependencies</h3>
+            <ol class="ng-scope">
+              <li><strong>Configuration blocks</strong> - get executed during the provider registrations and configuration phase.</li>
+              <li><strong>Run blocks</strong> - get executed after the injector is created and are used to kickstart the application.</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Code example</h3>
+            <pre><code>
+angular.module('myModule', []).
+  config(function(injectables) { // provider-injector
+    // This is an example of config block.
+    // You can have as many of these as you want.
+    // You can only inject Providers (not instances)
+    // into config blocks.
+  }).
+  run(function(injectables) { // instance-injector
+    // This is an example of a run block.
+    // You can have as many of these as you want.
+    // You can only inject instances (not Providers)
+    // into run blocks
+  });
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>View and Template</h3>
+            <p>The view is a projection of the model through the HTML template</p>
+            <pre><code>
+&lt;html ng-app="phonecatApp"&gt;
+  &lt;head&gt;
+    ...
+    &lt;script src="lib/angular/angular.js"&gt;&lt;/script&gt;
+    &lt;script src="js/controllers.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body ng-controller="PhoneListCtrl"&gt;   
+    &lt;ul&gt;
+      &lt;li ng-repeat="phone in phones"&gt;
+        {{phone.name}}
+        &lt;p&gt;{{phone.snippet}}&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;  
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>View and Template</h3>
+            <img src="img/tutorial_02.png" alt="">
+          </section>
+          <section>
+            <h3>Model and Controller</h3>
+            <h5>By providing context for our data model, the controller allows us to establish data-binding between the model and the view.</h5>
+            <pre><code>
+var phonecatApp = angular.module('phonecatApp', []);
+ 
+phonecatApp.controller('PhoneListCtrl', function ($scope) {
+  $scope.phones = [
+    {'name': 'Nexus S',
+     'snippet': 'Fast just got faster with Nexus S.'},
+    {'name': 'Motorola XOOM™ with Wi-Fi',
+     'snippet': 'The Next, Next Generation tablet.'},
+    {'name': 'MOTOROLA XOOM™',
+     'snippet': 'The Next, Next Generation tablet.'}
+  ];
+});
+            </code></pre>
+            <a href="http://localhost:8000/view_and_template/index.html" target="_blank">life example</a>
+          </section>
+          <section>
+            <h3>Scope</h3>
+            <h5>Angular uses scopes to keep models and views separate, but in sync</h5>
+            <img src="img/Scope.png" alt="">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Filtering</h3>
+            <pre><code>
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span2"&gt;
+        Search: &lt;input ng-model="query"&gt;
+      &lt;/div&gt;
+      &lt;div class="span10"&gt;
+        &lt;ul class="phones"&gt;
+          &lt;li ng-repeat="phone in phones | filter:query"&gt;
+            {{phone.name}}
+            &lt;p&gt;{{phone.snippet}}&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Filtering</h3>
+            <img src="img/tutorial_03.png" alt="">
+            <br>
+            <a href="http://localhost:8000/filtering/index.html" target="_blank">life example</a>
+          </section>
+          <section>
+            <h3>STANDARD FILTERS</h3>
+            <ul>
+              <li>currency</li>
+              <li>date</li>
+              <li>filter</li>
+              <li>json</li>
+              <li>limitTo</li>
+              <li>lowercase</li>
+              <li>number</li>
+              <li>orderBy</li>
+              <li>uppercase</li>
+            </ul>
+            <br/>
+            <a href="http://localhost:8000/standart_filters/index.html" target="_blank">life example</a>
+          </section>
+          <section>
+            <h3>Standart filters</h3>
+            <h5>code</h5>
+            <pre><code>
+{{ 10 | currency }}
+{{ 1395132927875|date:"dd-MM-yyyy" }}            
+{{ [1,2,3,4,5,6,7,8] | limitTo: 5 }}
+{{ "ABCD" | lowercase }}
+{{ "abcd" | uppercase }}
+            </code></pre>
+          </section>
+          <section>
+            <h3>Production example of filter</h3>
+            <pre style="font-size: 50%"><code>
+angular.module("wk.track3").filter('i18n', ['localize', function (localize) {
+    return function (input, params) {
+        var result = localize.getLocalizedString(input);
+        if(params && result && result != '') {
+            if(params instanceof Array) {
+                for (var index = 0; index < params.length; index++) {
+                    var target = '{' + (index) + '}';
+                    result = result.replace(target, params[index]);
+                }
+            } else  {
+                result = result.replace('{' + (0) + '}', params);
+            }
+        }
+        return result;
+    };
+}])
+            </code></pre>
+          </section>          
+          <section>
+            <h3>How to use filters in code</h3>
+            <pre><code>
+var result = $filter("date")(date, "MM-dd-yyyy");
+            </code></pre>
+            <pre><code>
+var res = $filter("orderBy")(this._publications, "displayName");
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Two-way Data Binding</h3>
+            <p>ngModel</p>
+            <pre><code>
+&lt;input ng-model="model.data"&gt;&lt;/input&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Two-way Data Binding</h3>
+            <pre><code>
+Search: &lt;input ng-model="query"&gt;
+  Sort by:
+  &lt;select ng-model="orderProp">
+    &lt;option value="name"&gt;Alphabetical&lt;/option&gt;
+    &lt;option value="age"&gt;Newest&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;ul class="phones"&gt;
+    &lt;li ng-repeat="phone in phones | filter:query | orderBy:orderProp"&gt;
+      {{phone.name}}
+      &lt;p&gt;{{phone.snippet}}&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Two-way Data Binding</h3>
+            <pre><code>
+var phonecatApp = angular.module('phonecatApp', []); 
+phonecatApp.controller('PhoneListCtrl', function ($scope) {
+  $scope.phones = [
+    {'name': 'Nexus S',
+     'snippet': 'Fast just got faster with Nexus S.',
+     'age': 1},
+    {'name': 'Motorola XOOM™ with Wi-Fi',
+     'snippet': 'The Next, Next Generation tablet.',
+     'age': 2},
+    {'name': 'MOTOROLA XOOM™',
+     'snippet': 'The Next, Next Generation tablet.',
+     'age': 3}
+  ]; 
+  $scope.orderProp = 'age';
+});
+            </code></pre>
+          </section>
+          <section>
+            <h3>Two-way Data Binding</h3>
+            <img src="img/tutorial_04.png" alt="">
+            <br>
+            <a href="http://localhost:8000/tow-way-binding/index.html" target="_blank">life example</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>XHRs &amp; Dependency Injection</h3>
+            <h5>json</h5>
+            <pre><code>
+[
+ {
+  "age": 13,
+  "id": "motorola-defy-with-motoblur",
+  "name": "Motorola DEFY\u2122 with MOTOBLUR\u2122",
+  "snippet": "Are you ready for everything life throws your way?"
+  ...
+ },
+...
+]
+            </code></pre>
+          </section>
+          <section>
+            <h3>XHRs &amp; Dependency Injection</h3>
+            <h5>controller</h5>
+            <pre><code>
+var phonecatApp = angular.module('phonecatApp', []);
+ 
+phonecatApp.controller('PhoneListCtrl', function ($scope, $http) {
+  $http.get('phones/phones.json').success(function(data) {
+    $scope.phones = data;
+  });
+ 
+  $scope.orderProp = 'age';
+});
+            </code></pre>
+          </section>
+          <section>
+            <h3>XHRs &amp; Dependency Injection</h3>
+            <img src="img/xhr_service_final.png" alt="">
+            <br>
+            <a href="http://localhost:8000/xhr/index.html">life example</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Routing &amp; Multiple Views</h3>
+            <pre style="font-size: 50%"><code>
+var appModule = angular.module('myApp', ['ngRoute',
+                        'ngResource', 'app.controllers']);
+appModule.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/details/:Id', {
+        templateUrl: 'repo-detail.html',
+        controller: 'RepoCtrl'
+      }).
+      when('/home', {
+        templateUrl: 'home.html',
+        controller: 'mainController'
+      }).
+      otherwise({
+        redirectTo: '/home'
+      });
+  }]);
+            </code></pre>
+          </section>
+          <section>
+            <h3>Routing &amp; Multiple Views</h3>
+            <a href="http://localhost:8000/routing/main.html" target="_blank">life example</a>
+          </section>
+        </section>
+        <section>
+        	<h3>Angular Life Cycle</h3>
+        	to mention:
+        	<ul>
+        		<li>angular event handlers</li>
+        		<li>binding</li>
+        		<li>watcher</li>
+        	</ul>
+        </section>
+		<section>
+			<section>
+				<h3>Directive</h3>
+				<h5>What are Directives?</h5>
+				<p class="fragment">At a high level, directives are markers on a DOM element that tell AngularJS's HTML compiler to attach a specified behavior to that DOM element or even transform the DOM element and its children.</p>
+			</section>
+			<section>
+				<h3>Matching Directives</h3>
+				<h5>In the following example, we say that the &lt;input&gt; element matches the ngModel directive</h5>
+				<pre><code>
+&lt;input ng-model="foo"&gt;
+					</code></pre>
+				<strong class="fragment">$compile can match directives based on element names, attributes, class names, as well as comments.</strong>
+			</section>
+			<section>
+				<pre><code>
+&lt;my-dir&gt;&lt;/my-dir&gt;
+&lt;span my-dir="exp"&gt;&lt;/span&gt;
+&lt;!-- directive: my-dir exp --&gt;
+&lt;span class="my-dir: exp;"&gt;&lt;/span&gt;
+				</code></pre>
+			</section>
+			<section>
+				<h3>Text and attribute bindings</h3>
+				<p style="text-align:left">During the compilation process the <span  style="color:#13DAEC">compiler</span> matches text and attributes using the <span style="color:#13DAEC">$interpolate</span> service to see if they contain embedded expressions.
+				</p>
+				<p style="text-align:left"> These expressions are registered as <span  style="color:#13DAEC">watches</span> and will update as part of	 normal <span  style="color:#13DAEC">digest</span> cycle. An example of interpolation is shown below:</p>
+				<pre><code>
+&lt;a ng-href="img/{{username}}.jpg"&gt;Hello {{username}}!&lt;/a&gt;
+				</code></pre>
+			</section>
+			<section>
+				<h3>ngAttr attribute bindings</h3>
+				<pre><code>
+&lt;svg&gt;
+  &lt;circle cx="{{cx}}"&gt;&lt;/circle&gt;
+&lt;/svg&gt;
+				</code></pre>
+				<pre><code>
+&lt;svg&gt;
+  &lt;circle ng-attr-cx="{{cx}}"&gt;&lt;/circle&gt;
+&lt;/svg&gt;
+				</code></pre>
+			</section>
+			<section>
+				<h3>Creating Directives</h3>
+				<p>To register a directive, you use the module.directive API.</p>				
+			</section>
+			<section>
+				<h3>Template-expanding directive</h3>
+				<pre><code>
+angular.module('docsTemplateUrlDirective', [])
+  .controller('Controller', ['$scope', function($scope) {
+    $scope.customer = {
+      name: 'Naomi',
+      address: '1600 Amphitheatre'
+    };
+  }])
+  .directive('myCustomer', function() {
+    return {
+      templateUrl: 'my-customer.html'
+    };
+  });
+				</code></pre>
+				<a href="http://localhost:8000/directives/index.html" target="_blank">life example</a>
+			</section>
+			<section>
+				<h3>Comprehensive Directive API</h3>
+				<pre><code style="font-size: 0.6em">
+var myModule = angular.module(...);
+ 
+  myModule.directive('directiveName', function factory(injectables) {
+    return {
+      priority: 0,
+      template: '<div></div>', // or // function(tElement, tAttrs) { ... }, // or //templateUrl: 'directive.html'
+      replace: false,
+      transclude: false,
+      restrict: 'A',
+      scope: false,
+      controller: function($scope, $element, $attrs, $transclude, otherInjectables) { ... },
+      controllerAs: 'stringAlias',
+      require: 'siblingDirectiveName', // or // ['^parentDirectiveName', '?optionalDirectiveName', '?^optionalParent'],
+      compile: function compile(tElement, tAttrs, transclude) {
+        return {
+          pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+          post: function postLink(scope, iElement, iAttrs, controller) { ... }
+        }
+        // or
+        // return function postLink( ... ) { ... }
+      },
+      // or
+      // link: {
+      //  pre: function preLink(scope, iElement, iAttrs, controller) { ... },
+      //  post: function postLink(scope, iElement, iAttrs, controller) { ... }
+      // }
+      // or
+      // link: function postLink( ... ) { ... }
+    };
+  });
+				</code></pre>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>priority</h5>
+				<p>is used to sort the directives before their compile functions get called.</p>
+				<p>Pre-link functions are also run in priority order, but post-link functions are run in reverse order.</p>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>terminal</h5>
+				<p>If set to true then the current priority will be the last set of directives which will execute</p>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>Replace</h5>
+				<p>Specify where the template should be inserted. Defaults to false.</p>
+				<ul>
+					<li>true - the template will replace the current element.</li>
+					<li>false - the template will replace the contents of the current element.</li>
+				</ul>
+			</section>			
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>scope</h5>
+				<p>If set to true, then a new scope will be created for this directive.</p>
+				<p>If set to {} (object hash), then a new "isolate" scope is created. </p>
+				<p>The 'isolate' scope differs from normal scope in that it does not prototypically inherit from the parent scope.</p>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>'Isolated' scope</h5>
+				<p>The 'isolate' scope differs from normal scope in that it does not prototypically inherit from the parent scope.</p>
+				<p style="font-size:0.7em">This is useful when creating reusable components, which should not accidentally read or modify data in the parent scope.</p>
+				<a href="http://docs.angularjs.org/api/ng/service/$compile#-scope-" target="_blank">Very important point</a>
+			</section>			
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>Controller</h5>
+				<a href="http://docs.angularjs.org/api/ng/service/$compile#-controller-" target="_blank">Very important point</a>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>Transclude</h5>
+				<a href="http://docs.angularjs.org/api/ng/service/$compile#-transclude-" target="_blank">Very important point</a>
+				<br>
+				<a href="http://localhost:8000/transclude/index.html" target="_blank">Life example</a>
+			</section>
+			<section>
+				<h3>Directive Definition Object</h3>
+				<h5>Compile vs Link</h5>
+				<a href="http://docs.angularjs.org/api/ng/service/$compile#-compile-" target="_blank">Very important point</a>
+				<br>
+				<a href="http://localhost:8000/compilevslink/index.html" target="_blank">Life example</a>
+			</section>
+			<section>
+				<h3>Attributes</h3>
+				<a href="http://docs.angularjs.org/api/ng/service/$compile#attributes" target="_blank">Attributes</a>
+			</section>
+			<section>
+				<h3>Practice</h3>
+				<p>to implement custom filter which converts came-case to dash-separeted strings.</p>
+			</section>
+			<section>
+				<h3>Practice</h3>
+				<p>to implement reusable tab control.</p>
+			</section>			
+			
+		</section>
+
+
+        <section>
+              <section>
+                <h2>Testing</h2>
+                <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/antonama/images/265154/5_testing.png">
+                <p>ngMock. Testing controllers. Testing services.</p>
+              </section>
+
+              <section>
+                <h2>Jasmine</h2>
+              <ul>
+              <li>BDD-style testing framework</li>
+              <li>Syntax based on rspec</li>
+              <li>Bundled mocking functionality</li>
+            </ul>
+          </section>
+
+          <section>
+            <br>
+            <div>ngMock</div>
+            <br>
+            <div>Most used features:</div>
+            <br>
+            <ul>
+              <li>
+                <font color="#00ffff">module()</font> - load existing module by name or create custom module
+              </li>
+              <li>
+                <font color="#00ffff">inject()</font> - inject and arbitary
+              </li>
+              <li>
+                <font color="#00ffff">$httpBackend</font> - mock the backend of $http in order to test AJAX requests
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>inject() and module()</h2>
+            <div>Pass as a function</div>
+            <pre><code data-trim>
+beforeEach(module('myModule'));
+it(inject(function(_service_){
+    service = _service_;
+}));
+            </code></pre>
+            <div>Or call directly</div>
+            <pre><code data-trim>
+beforeEach(function() {
+   module('myModule');
+});
+it(function() {
+   inject(function(_service_) {
+      service = _service_;
+  });
+});
+            </code></pre>
+            <div>Works with <font color="#00ffff">beforeEach()</font>, <font color="#00ffff">afterEach()</font> and <font color="#00ffff">it()</font></div>
+          </section>
+
+          <section>
+            <h2>$controller</h2>
+            <pre><code data-trim> 
+$controller('PhoneListCtrl', {$scope:scope})
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>The approach to test a controller</h2>
+            <br>
+              <ul>
+            <li>Load the module</li>
+                    <li>Create a new scope with $rootScope.new()</li>
+                    <li>Create the controller with $controller</li>
+                    <ul>
+                  <li>Inject your scope into the $controller call</li>
+                    </ul>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h3>Happy End</h3>
+          <br>
+          <h3>Questions?</h3>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+
+      Reveal.initialize({
+
+          // Display controls in the bottom right corner
+          controls: true,
+
+          // Display a presentation progress bar
+          progress: true,
+
+          // Display the page number of the current slide
+          slideNumber: false,
+
+          // Push each slide change to the browser history
+          history: true,
+
+          // Enable keyboard shortcuts for navigation
+          keyboard: true,
+
+          // Enable the slide overview mode
+          overview: true,
+
+          // Vertical centering of slides
+          center: true,
+
+          // Enables touch navigation on devices with touch input
+          touch: true,
+
+          // Loop the presentation
+          loop: false,
+
+          // Change the presentation direction to be RTL
+          rtl: false,
+
+          // Turns fragments on and off globally
+          fragments: true,
+
+          // Flags if the presentation is running in an embedded mode,
+          // i.e. contained within a limited portion of the screen
+          embedded: false,
+
+          // Number of milliseconds between automatically proceeding to the
+          // next slide, disabled when set to 0, this value can be overwritten
+          // by using a data-autoslide attribute on your slides
+          autoSlide: 0,
+
+          // Stop auto-sliding after user input
+          autoSlideStoppable: true,
+
+          // Enable slide navigation via mouse wheel
+          mouseWheel: false,
+
+          // Hides the address bar on mobile devices
+          hideAddressBar: true,
+
+          // Opens links in an iframe preview overlay
+          previewLinks: false,
+
+          // Transition style
+          transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+          // Transition speed
+          transitionSpeed: 'default', // default/fast/slow
+
+          // Transition style for full page slide backgrounds
+          backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+          // Number of slides away from the current that are visible
+          viewDistance: 3,
+
+          // Parallax background image
+          // parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+          // Parallax background size
+          // parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+          /*multiplex: {
+              // Example values. To generate your own, got to [server-address]:[server-port]/token
+              secret: '13938773031275099188', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+              id: 'e3d99f2849a13d82', // Obtained from socket.io server
+              url: 'epbyminw3993::1948' // Location of socket.io server
+          },*/
+
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+            /*{ src: 'plugin/socket.io/socket.io.min.js', async: true },
+            { src: 'plugin/multiplex/master.js', async: true },*/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'js/rolling-links.js', async: true } // if you don't want rolling links in your presentation, comment or remove this option
+        ]
+
+      });
+
+    </script>
+  </body>
+</html>

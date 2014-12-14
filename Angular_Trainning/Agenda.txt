@@ -1,0 +1,34 @@
+- Angular Basic/Simple angular app = 2/1
+	- what Angular is
+	- angular basics:
+		- bootstrapping
+		- dependency injection
+		- two way binding 
+		- templates
+		- controllers & models
+		- directives & filters
+		- routing 
+	- youtube for workshop (to cover as much as posibble from tutorial); (1h)
+
+	- if any difficulties please let us know about
+
+
+- Angular deep inside (sounds really great ;) )
+	- Angular life cycle; + 
+	- dependency injection in action (how to register dependency)
+	- custom services (example of implementation - syntax mostly)
+	- isolated scopes for directives (explain what for and some details with images :) ) 
+	- filters (example of filter + code)
+	- ask about challenge in LIT 
+		- egghead.com
+	- $timeout
+
+	- work shop!!!! - implement a directive specific one
+
+- Tests
+	- alternate frameworks jasmine
+	- e2e
+	- unit
+	- setup karma with jasmine 
+	+ align with Dima Herasimov
+Directives (isolated scope)
