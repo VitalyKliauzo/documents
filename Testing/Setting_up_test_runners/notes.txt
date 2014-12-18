@@ -20,6 +20,12 @@ Preparation:
 2. webdriver-manager update
 3. npm install -g jasmine-reporters
 
+4. set upt config file (you can have a look at conf.js)
+
+5. run "webdriver-manager start"
+6. run "protractor conf.js"
+
+
 Manual Run
 1. Unit tests
 	-	open manual_test_env_unit/JasmineTestsRunner.html
