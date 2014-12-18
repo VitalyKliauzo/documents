@@ -1,0 +1,30 @@
+Auto Run
+
+1. Unit tests
+Preparation:
+1. ensure that NodeJS is installed on your machine.
+2. npm install -g karma
+3. npm install -g karma-cli //to avoid getting 'karma' is not recognized as an internal or external command, operable program or batch file.
+4. npm install karma-ng-scenario //
+5. npm install karma-junit-reporter // for reports in xml format
+6. karma init // to configure karma
+7. karma start karma.conf.js // to start karma; karma run
+
+https://github.com/karma-runner/karma
+https://docs.angularjs.org/guide/unit-testing
+
+2. E2E tests
+https://github.com/angular/protractor/blob/master/docs/tutorial.md
+Preparation:
+1. npm install -g protractor
+2. webdriver-manager update
+3. npm install -g jasmine-reporters
+
+Manual Run
+1. Unit tests
+	-	open manual_test_env_unit/JasmineTestsRunner.html
+2. E2E tests
+	-	go to manual_test_env_e2e
+	-	run "cmd"
+	-	in cmd run "node server.js" to start web-server
+	-	open http://localhosr:8000/manual_e2e_test_runner.html in browser to start tests run

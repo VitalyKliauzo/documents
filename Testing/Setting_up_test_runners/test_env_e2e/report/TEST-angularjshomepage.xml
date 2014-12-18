@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="angularjs homepage" errors="0" tests="1" failures="0" time="3.991" timestamp="2014-12-16T01:00:20">
+  <testcase classname="angularjs homepage" name="should have a title" time="3.989"></testcase>
+</testsuite>
+</testsuites>

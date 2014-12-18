@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 39.0.2171 (Windows 7)" package="unit" timestamp="2014-12-16T08:59:27" id="0" hostname="HP-PB-KLIAUZO">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Chrome 39.0.2171 (Windows 7)" package="unit" timestamp="2014-12-16T08:59:27" id="0" hostname="HP-PB-KLIAUZO" tests="1" errors="0" failures="0" time="0.008">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"/>
+    </properties>
+    <testcase name="should return object" time="0.008" classname="unit Chrome 39.0.2171 (Windows 7).mainController test"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
