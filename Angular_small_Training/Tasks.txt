@@ -24,17 +24,23 @@
 5. Implement application that will demonstrate communication between directives using dependency injection.
 	so that data is transfered through the services injected into both directives.
 	
-6. Implement widget with jquery. For example a modal window which display the file list coming from backend.
+6. Digest cycle:
+	create application which demonstrate work of digest cycle. For that create2 methods (one starting $timeout for changing value in scope, another uses setTimeout for changing the value) for changing value in scope.
+	Display the value with {{}} expression. Check that label displaying the value changed with setTimeout is not refreshed.
+	
+	Do the same with ajax, click event.
+ 	
+7. Implement widget with jquery. For example a modal window which display the file list coming from backend.
 	Widget has setValue, getValue, onValueChanged methods as public API. onValueChanged is a callback that called when the used mark/unmark a file from the list as selected (for example checks/uncheches checkbox related to the file).
 	The file list is something specific for the widget(widget request it from backend, or you can emulate async operation with setTimeout or just hardcode some collection)
 	
-6.1 Wrap jquery widget with angularjs directive so that hide all the details of implementation. To demonstrate it create the list of selected files in angularJS controller.
+7.1 Wrap jquery widget with angularjs directive so that hide all the details of implementation. To demonstrate it create the list of selected files in angularJS controller.
 	display this list with ng-repeat and {{}} expression.
 	Send this list as a list of selected files to directive.
 	Check that the list of files in modal window and rendererd with ng-repeat is the same.
-	Check/uncheck several files. Check that the list rendered with ng-repeat is changing as you are selcting/unselecting files in modal window.
+	Check/uncheck several files. Check that the list rendered with ng-repeat is changing as you are selecting/unselecting files in modal window.
 
-6.2 Cover this control with test on jasmine to automate verification mentioned above.
+7.2 Cover this control with test on jasmine to automate verification mentioned above.
 
 
 
